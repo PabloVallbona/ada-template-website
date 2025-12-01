@@ -1,0 +1,33 @@
+Configuration file: /Users/pablovallbona/Documents/GitHub/ada-template-website/_config.yml
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+            Source: /Users/pablovallbona/Documents/GitHub/ada-template-website
+       Destination: /Users/pablovallbona/Documents/GitHub/ada-template-website/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+[33m   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.[0m
+                    done in 17.599 seconds.
+ Auto-regeneration: enabled for '/Users/pablovallbona/Documents/GitHub/ada-template-website'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2025-12-01 13:48:03
+                    jekyll.log
+                    ...done in 6.327115 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-12-01 13:48:09
+                    jekyll.log
+                    ...done in 4.622004 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-12-01 13:48:14
+                    jekyll.log
+                    ...done in 0.869693 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-12-01 13:48:19
+                    jekyll.log
+                    ...done in 3.716375 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-12-01 13:48:24
+                    jekyll.log
+                    ...done in 3.716778 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-12-01 13:48:29
+                    jekyll.log
