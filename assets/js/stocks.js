@@ -211,8 +211,8 @@ function renderAAPLChart(metric) {
             datasets: [{
                 label: `AAPL - ${metric}`,
                 data: data,
-                borderColor: isVolume ? '#2176FF' : '#2176FF',
-                backgroundColor: isVolume ? '#2176FF' : '#2176FF',
+                borderColor: '#2176FF',
+                backgroundColor: '#2176FF', // single string, not array
                 pointRadius: isVolume ? 1 : 1,
                 borderWidth: 1
             }]
@@ -246,9 +246,7 @@ function renderAAPLChart(metric) {
                         callback: function(value) {
                             if (isVolume) return Number(value).toLocaleString();
                             return value;
-                        },
-                        min: isVolume ? undefined : undefined,
-                        max: isVolume ? undefined : undefined
+                        }
                     }
                 }
             }
