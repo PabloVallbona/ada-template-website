@@ -1,6 +1,6 @@
 # Introduction
 * * *
-Can **doing well** in finance also mean **doing good** for the planet? If you’ve asked yourself this question, you’re not alone—we have too! Sustainable investing has been gaining a lot of attention lately, and we wanted to see whether ethical investing can also stand up financially. To find out, we looked at data from ESG funds and traditional ETFs, comparing them across several financial metrics to explore how they behave differently.
+Can **doing well** in finance also mean **doing good** for the planet? If you’ve asked yourself this question, you’re not alone, we have too! Sustainable investing has been gaining a lot of attention lately, and we wanted to see whether ethical investing can also stand up financially. To find out, we looked at data from ESG funds and traditional ETFs, comparing them across several financial metrics to explore how they behave differently.
 
 ## What are ESG funds?
 * * *
@@ -81,6 +81,21 @@ Explore trading volume data for any stock in our dataset. Search for a stock sym
     background-color: #f6f8fa;
     border-radius: 4px;
   }
+  
+  .loading-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0366d6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 </style>
 
 <div class="stock-viewer-container">
@@ -101,22 +116,39 @@ Explore trading volume data for any stock in our dataset. Search for a stock sym
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 
 <script>
-// Load stock data from JSON file
-let window_STOCK_DATA = null;
+// Cache for loaded stock data to avoid re-fetching
+const stockCache = {};
+let allSymbols = [];
+let symbolsLoaded = false;
 
-fetch('/assets/data/stocks_data.json')
-  .then(response => {
-    if (!response.ok) throw new Error('Failed to load stock data');
-    return response.json();
-  })
-  .then(data => {
-    window.STOCK_DATA = data;
-    console.log(`Loaded data for ${Object.keys(data).length} stocks`);
-  })
-  .catch(error => {
-    console.error('Error loading stock data:', error);
-    showError('Failed to load stock data. Please refresh the page.');
-  });
+// Load symbol list on page load
+function loadSymbolList() {
+    fetch('/assets/data/symbols.json')
+        .then(response => response.json())
+        .then(data => {
+            allSymbols = data;
+            symbolsLoaded = true;
+            console.log(`Loaded ${allSymbols.length} stock symbols`);
+        })
+        .catch(error => console.error('Error loading symbol list:', error));
+}
+
+// Load individual stock data on demand
+function loadStockData(symbol) {
+    if (stockCache[symbol]) {
+        return Promise.resolve(stockCache[symbol]);
+    }
+    
+    return fetch(`/assets/data/stocks/${symbol}.json`)
+        .then(response => {
+            if (!response.ok) throw new Error('Stock not found');
+            return response.json();
+        })
+        .then(data => {
+            stockCache[symbol] = data;
+            return data;
+        });
+}
 
 function showError(message) {
     const errorDiv = document.getElementById('errorMessage');
@@ -140,105 +172,117 @@ function loadStock(symbol) {
         return;
     }
     
-    // Check if data is loaded
-    if (!window.STOCK_DATA) {
-        showError('Stock data is still loading... Please try again in a moment');
-        return;
-    }
-    
-    // Get data
     const upperSymbol = symbol.toUpperCase().trim();
-    const data = window.STOCK_DATA[upperSymbol];
+    const loadBtn = document.getElementById('loadBtn');
     
-    if (!data || data.length === 0) {
-        showError(`Stock symbol "${upperSymbol}" not found. Please check the symbol and try again.`);
-        return;
-    }
+    // Show loading state
+    loadBtn.disabled = true;
+    loadBtn.innerHTML = '<span class="loading-spinner"></span> Loading...';
     
-    // Prepare chart data
-    const labels = data.map(d => d.date);
-    const volumes = data.map(d => d.volume);
-    
-    // Calculate statistics
-    const maxVolume = Math.max(...volumes);
-    const minVolume = Math.min(...volumes);
-    const avgVolume = (volumes.reduce((a, b) => a + b, 0) / volumes.length).toFixed(0);
-    
-    // Destroy old chart if exists
-    let chart = document.getElementById('chart').chart;
-    if (chart) {
-        chart.destroy();
-    }
-    
-    // Get canvas context
-    const ctx = document.getElementById("chart").getContext("2d");
-    
-    // Create new chart
-    const newChart = new Chart(ctx, {
-        type: "bar",
-        data: {
-            labels: labels,
-            datasets: [{
-                label: `Trading Volume - ${upperSymbol}`,
-                data: volumes,
-                backgroundColor: '#0366d6',
-                borderColor: '#0256c7',
-                borderWidth: 1,
-                borderRadius: 2
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'top'
+    loadStockData(upperSymbol)
+        .then(data => {
+            if (!data || data.length === 0) {
+                showError(`Stock symbol "${upperSymbol}" not found.`);
+                loadBtn.disabled = false;
+                loadBtn.innerHTML = 'Load Chart';
+                return;
+            }
+            
+            // Parse data (stored as arrays: [date, open, close, high, low, volume])
+            const labels = data.map(d => d[0]);
+            const volumes = data.map(d => d[5]);
+            
+            // Calculate statistics
+            const maxVolume = Math.max(...volumes);
+            const minVolume = Math.min(...volumes);
+            const avgVolume = (volumes.reduce((a, b) => a + b, 0) / volumes.length).toFixed(0);
+            
+            // Destroy old chart if exists
+            const chartCanvas = document.getElementById('chart');
+            if (chartCanvas.chart) {
+                chartCanvas.chart.destroy();
+            }
+            
+            // Get canvas context
+            const ctx = chartCanvas.getContext("2d");
+            
+            // Create new chart
+            const newChart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: `Trading Volume - ${upperSymbol}`,
+                        data: volumes,
+                        backgroundColor: '#0366d6',
+                        borderColor: '#0256c7',
+                        borderWidth: 1,
+                        borderRadius: 2
+                    }]
                 },
-                title: {
-                    display: true,
-                    text: `Trading Volume for ${upperSymbol}`
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Volume'
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        title: {
+                            display: true,
+                            text: `Trading Volume for ${upperSymbol}`
+                        }
                     },
-                    ticks: {
-                        callback: function(value) {
-                            return value.toLocaleString();
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Volume'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value.toLocaleString();
+                                }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Date'
+                            }
                         }
                     }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Date'
-                    }
                 }
-            }
-        }
-    });
-    
-    // Store chart reference
-    document.getElementById('chart').chart = newChart;
-    
-    // Show chart and info
-    document.getElementById('chartContainer').style.display = 'block';
-    
-    // Update stock info
-    const infoDiv = document.getElementById('stockInfo');
-    infoDiv.innerHTML = `
-        <strong>${upperSymbol} Statistics</strong><br>
-        Records: ${data.length} trading days<br>
-        Max Volume: ${maxVolume.toLocaleString()}<br>
-        Min Volume: ${minVolume.toLocaleString()}<br>
-        Avg Volume: ${avgVolume.toLocaleString()}
-    `;
-    infoDiv.style.display = 'block';
+            });
+            
+            // Store chart reference
+            chartCanvas.chart = newChart;
+            
+            // Show chart and info
+            document.getElementById('chartContainer').style.display = 'block';
+            
+            // Update stock info
+            const infoDiv = document.getElementById('stockInfo');
+            infoDiv.innerHTML = `
+                <strong>${upperSymbol} Statistics</strong><br>
+                Records: ${data.length} trading days<br>
+                Max Volume: ${maxVolume.toLocaleString()}<br>
+                Min Volume: ${minVolume.toLocaleString()}<br>
+                Avg Volume: ${avgVolume.toLocaleString()}
+            `;
+            infoDiv.style.display = 'block';
+            
+            // Reset button
+            loadBtn.disabled = false;
+            loadBtn.innerHTML = 'Load Chart';
+        })
+        .catch(error => {
+            showError(`Error loading stock "${upperSymbol}". Make sure the symbol exists in our dataset.`);
+            console.error('Error:', error);
+            loadBtn.disabled = false;
+            loadBtn.innerHTML = 'Load Chart';
+        });
 }
 
 // Event listener for load button
@@ -260,5 +304,16 @@ if (stockSearch) {
         }
     });
 }
+
+// Load symbol list on page load
+loadSymbolList();
 </script>
 
+
+## The ESG data
+
+After selecting th etfs with the ESG labels the dataset is as follows:
+
+| Number of etfs       | Labelled as ESG    | Percentage |
+|:---------------------|:-------------------|:-----------|
+|2166                  | 42                 | 1.9        |
