@@ -123,87 +123,45 @@ let symbolsLoaded = false;
 
 // Load symbol list on page load
 function loadSymbolList() {
-    // Try multiple possible paths
-    const paths = ['/assets/data/symbols.json', './assets/data/symbols.json', 'assets/data/symbols.json'];
-    
-    const tryNextPath = (index) => {
-        if (index >= paths.length) {
-            console.error('Could not load symbols from any path');
-            return;
-        }
-        
-        const path = paths[index];
-        console.log(`Trying to load symbols from: ${path}`);
-        
-        fetch(path)
-            .then(response => {
-                if (!response.ok) {
-                    console.log(`Failed (${response.status}), trying next path...`);
-                    tryNextPath(index + 1);
-                    return;
-                }
-                return response.json().then(data => {
-                    allSymbols = data;
-                    symbolsLoaded = true;
-                    console.log(`Loaded ${allSymbols.length} stock symbols from: ${path}`);
-                });
-            })
-            .catch(error => {
-                console.log(`Error with ${path}:`, error.message);
-                tryNextPath(index + 1);
-            });
-    };
-    
-    tryNextPath(0);
+    fetch('assets/data/symbols.json')
+        .then(response => {
+            console.log(`Symbols fetch status: ${response.status}`);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response.json();
+        })
+        .then(data => {
+            allSymbols = data;
+            symbolsLoaded = true;
+            console.log(`✓ Loaded ${allSymbols.length} stock symbols`);
+        })
+        .catch(error => console.error('Error loading symbols:', error));
 }
 
 // Load individual stock data on demand
 function loadStockData(symbol) {
     if (stockCache[symbol]) {
+        console.log(`✓ Using cached data for ${symbol}`);
         return Promise.resolve(stockCache[symbol]);
     }
     
-    // Try multiple possible paths
-    const paths = [
-        `/assets/data/stocks/${symbol}.json`,
-        `./assets/data/stocks/${symbol}.json`,
-        `assets/data/stocks/${symbol}.json`
-    ];
+    const path = `assets/data/stocks/${symbol}.json`;
+    console.log(`Fetching: ${path}`);
     
-    return new Promise((resolve, reject) => {
-        let lastError;
-        
-        const tryNextPath = (index) => {
-            if (index >= paths.length) {
-                reject(lastError || new Error('Stock not found'));
-                return;
-            }
-            
-            const path = paths[index];
-            console.log(`Trying to fetch: ${path}`);
-            
-            fetch(path)
-                .then(response => {
-                    if (!response.ok) {
-                        lastError = new Error(`HTTP ${response.status} for ${path}`);
-                        tryNextPath(index + 1);
-                        return;
-                    }
-                    return response.json().then(data => {
-                        console.log(`Successfully loaded from: ${path}`);
-                        stockCache[symbol] = data;
-                        resolve(data);
-                    });
-                })
-                .catch(error => {
-                    lastError = error;
-                    console.log(`Failed to fetch ${path}:`, error.message);
-                    tryNextPath(index + 1);
-                });
-        };
-        
-        tryNextPath(0);
-    });
+    return fetch(path)
+        .then(response => {
+            console.log(`Fetch status for ${symbol}: ${response.status}`);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response.json();
+        })
+        .then(data => {
+            console.log(`✓ Loaded ${data.length} records for ${symbol}`);
+            stockCache[symbol] = data;
+            return data;
+        })
+        .catch(error => {
+            console.error(`Error loading ${symbol}:`, error);
+            throw error;
+        });
 }
 
 function showError(message) {
