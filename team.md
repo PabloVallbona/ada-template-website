@@ -4,7 +4,9 @@ layout: default
 
 # 5 Finance Bros
 
-We are a team of 5 quarter-zip wearing bros who are passionate about one thing and one thing only, making money. In our path to achieving this goal it is imperative we master the art of data analysis which is what has brought us to this project, which is our first try at the data analysis of the market.
+
+We’re a team of five quarter-zip-wearing bros, and we’re obsessed with one thing: making money. To crush this goal, we’ve got to master the art of data analysis, which is exactly why we dove into this project: our first attempt at understanding the market through data.
+
 
 ## The Members
 
