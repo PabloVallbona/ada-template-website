@@ -10,12 +10,9 @@ ESG stands for **Environmental**, **Social**, and **Governance**, basically, the
 # The Data
 * * *
 
-<<<<<<< HEAD
 The data used in this investigation contains historical daily data on all the tickers that are currently trading on NASDAQ starting from different timepoints up to April 2020. The daily data contains: **Opening**,**Closing**,**Highest** and **Lowest** prices as well as the total **volume** traded on that specific day. We also have access to metadata for each company where we find our ESG labels.
 
-## Interactive Stock Volume Viewer
-
-Explore trading volume data for any stock in our dataset. Search for a stock symbol and view its historical trading volume patterns.
+Below is a visualization of the data for the Apple stock.
 
 <style>
   .stock-viewer-container {
@@ -333,5 +330,3 @@ After selecting the etfs with the ESG labels the dataset is as follows:
 |:---------------------|:-------------------|:-----------|
 |                 2166 |                 42 |        1.9 |
 
-=======
->>>>>>> parent of 4043fc3 (gitignore)

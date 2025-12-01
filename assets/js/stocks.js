@@ -211,8 +211,8 @@ function renderAAPLChart(metric) {
             datasets: [{
                 label: `AAPL - ${metric}`,
                 data: data,
-                borderColor: isVolume ? '#2176FF' : '#1fd603ff',
-                backgroundColor: isVolume ? 'rgba(214, 3, 3, 0.8)' : 'rgba(3,102,214,0.8)',
+                borderColor: isVolume ? '#2176FF' : '#2176FF',
+                backgroundColor: isVolume ? '#2176FF' : '#2176FF',
                 pointRadius: isVolume ? 1 : 1,
                 borderWidth: 1
             }]
@@ -221,8 +221,8 @@ function renderAAPLChart(metric) {
             responsive: true,
             maintainAspectRatio: true,
             plugins: {
-                legend: { display: true },
-                title: { display: true, text: `AAPL - ${metric}` }
+                legend: { display: false },
+                title: { display: false,}
             },
             scales: {
                 x: {
