@@ -176,8 +176,7 @@ async function loadAAPLData() {
 }
 
 function getMetricSeries(metric) {
-    //const labels = AAPL_DATA.map(d => d.date);
-    const labels = [...new Set(AAPL_DATA.map(d => d.date.split('-')[0]))];
+    const labels = AAPL_DATA.map(d => d.date);
     let data = [];
     switch (metric) {
         case 'Low': data = AAPL_DATA.map(d => d.Low); break;
