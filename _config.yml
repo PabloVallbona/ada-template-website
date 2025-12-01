@@ -9,3 +9,5 @@ navigation:
     url: example
   - title: Volatility
     url: volatility
+  - title: The Team
+    url: team
