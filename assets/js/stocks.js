@@ -211,7 +211,7 @@ function renderAAPLChart(metric) {
             datasets: [{
                 label: `AAPL - ${metric}`,
                 data: data,
-                borderColor: '#2176FF',
+                borderColor: isVolume ? '#2176FF' : '#2176FF',
                 backgroundColor: isVolume ? '#2176FF' : '#2176FF',
                 pointRadius: isVolume ? 1 : 1,
                 borderWidth: 1
@@ -239,13 +239,16 @@ function renderAAPLChart(metric) {
                     title: { display: true, text: 'Year' }
                 },
                 y: {
-                    beginAtZero: isVolume,
-                    title: { display: true, text: isVolume ? 'Volume' : 'Price (USD)' },
+                    type: isVolume ? 'logarithmic' : 'linear',
+                    beginAtZero: false,
+                    title: { display: true, text: isVolume ? 'Volume (log scale)' : 'Price (USD)' },
                     ticks: {
                         callback: function(value) {
                             if (isVolume) return Number(value).toLocaleString();
                             return value;
-                        }
+                        },
+                        min: isVolume ? undefined : undefined,
+                        max: isVolume ? undefined : undefined
                     }
                 }
             }
