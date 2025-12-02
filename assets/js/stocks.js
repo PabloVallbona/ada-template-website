@@ -116,6 +116,21 @@ function loadStock(symbol) {
     infoDiv.style.display = 'block';
 }
 
+function aggregateVolumeByYear() {
+    const map = {};
+
+    AAPL_DATA.forEach(d => {
+        const year = d.date.split('-')[0];
+        if (!map[year]) map[year] = 0;
+        map[year] += d.Volume;
+    });
+
+    return {
+        labels: Object.keys(map),
+        data: Object.values(map)
+    };
+}
+
 /////////////////////////////////
 
 //////////////////////////////
@@ -197,12 +212,26 @@ function renderAAPLChart(metric) {
     }
 
     const ctx = document.getElementById('aaplChart').getContext('2d');
-    const { labels, data } = getMetricSeries(metric);
+    //const { labels, data } = getMetricSeries(metric);
+    //const isVolume = metric === 'Volume';
+
+    let labels, data;
+    const isVolume = metric === 'Volume';
+
+    if (isVolume) {
+        const yearly = aggregateVolumeByYear();
+        labels = yearly.labels;
+        data = yearly.data;
+    } else {
+        const series = getMetricSeries(metric);
+        labels = series.labels;
+        data = series.data;
+    }
 
     // If chart exists, destroy to update
     if (aaplChart) aaplChart.destroy();
 
-    const isVolume = metric === 'Volume';
+   
 
     aaplChart = new Chart(ctx, {
         type: isVolume ? 'bar' : 'line',
