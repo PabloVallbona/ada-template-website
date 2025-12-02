@@ -9,5 +9,9 @@ navigation:
     url: example
   - title: Volatility
     url: volatility
+  - title: Crisis Reaction
+    url: crisis
+  - title: Long Term Performance
+    url: long
   - title: The Team
     url: team
