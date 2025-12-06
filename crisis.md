@@ -17,19 +17,19 @@ We didn't just pick random bad days. We chose four distinct flavors of market ch
 
 ## The Math Behind the Madness
 
-Before we look at the charts, let's establish how we kept score. We calculated returns for over 4,000 ETFs and 6,000 stocks. To ensure the chaos didn't break our models, we cleaned the data by clipping extreme daily outliers (moves greater than $$\pm 20\%$$) which often indicate data errors rather than market action.
+Before we look at the charts, let's establish how we kept score. We calculated returns for over 4,000 ETFs. The stocks were not analysed to keep the comparison fair and focused on the ETF level only. Here are the key metrics we used to evaluate performance during each crisis: 
 
 **1. Daily Returns ($$R_t$$):**  
-For every asset, we calculated the daily percentage change:
-$$R_t = \left( \frac{P_t - P_{t-1}}{P_{t-1}} \right) \times 100$$
+For every asset, we calculated the daily percentage change:  
+$$R_t = \left( \frac{P_t - P_{t-1}}{P_{t-1}} \right)$$
 with $$P_t$$ being the closing price on day $$t$$.
 
 **2. Cumulative Returns ($$CR_T$$):**  
-To visualize the "pain journey" over time $$T$$, we compounded these daily returns:
-$$CR_T = \left( \prod_{t=1}^{T} (1 + \frac{R_t}{100}) \right) - 1$$
+To visualize the "pain journey" over time $$T$$, we compounded these daily returns:  
+$$CR_T = \left( \prod_{t=1}^{T} (1 + R_t) \right) - 1$$
 
 **3. Volatility (Risk):**  
-We measure fear by the standard deviation ($$\sigma$$) of the daily returns during the crisis period. A higher $$\sigma$$ means the portfolio was wildly unpredictable.
+We measure fear by the standard deviation ($$\sigma$$) of the daily returns during the crisis period. A higher $$\sigma$$ means the portfolio was wildly unpredictable.  
 $$\sigma = \sqrt{\frac{\sum (R_t - \bar{R})^2}{N-1}}$$
 with $$\bar{R}$$ being the mean daily return and $$N$$ the number of trading days.
 
@@ -106,6 +106,8 @@ A victory for ESG by a hair. The China-US trade war crisis was mainly about unpr
 * **Non-ESG Mean Return:** -0.14%
 
 While the cumulative lines both trend down as excepted, the Non-ESG portfolio experienced sharper drops. The ESG portfolio's "quality bias" (companies with better governance and balance sheets) likely dampened the blow of the economic shutdown. This time, being great and conscious paid off again.
+These results give differnent results than the boxplot analysis where non-ESG seemed to perform better.
+It can be explained because while the non ESG portfolio had better 'typical' days (higher median), its bad days were catastrophic, dragging down its overall average. So ESG was less exciting, but safer.
 
 ### Round 3: Russia Goes Rogue (2022)
 
@@ -128,8 +130,8 @@ In fact, look at that sankey diagram of non-ESG sectors during the crisis: Energ
 
 **Analysis:**
 We modeled a sharp shock similar to 2018 but faster.
-* **ESG Mean Return:** -0.229%
-* **Non-ESG Mean Return:** -0.232%
+* **ESG Mean Return:** -0.232%
+* **Non-ESG Mean Return:** -0.229%
 
 This time, non-ESG proves slightly more resilient, but both portfolios took a heating and followed similar paths. 
 
