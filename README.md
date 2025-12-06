@@ -64,7 +64,7 @@ Below is a visualisation of the data for the Apple stock for different metrics. 
 
 We can further take a look at the section of the data that we will use that is comprised of the ETF data. Below a visulaisation of the sectors present in our data.
 
-<iframe src="/assets/graphs/html/etf_sector_distribution.html" width="100%" height="600px" frameborder="0"></iframe>
+<iframe src="/assets/graphs/etf_sector_distribution.html" width="100%" height="600px" frameborder="0"></iframe>
 
 
 * * *
