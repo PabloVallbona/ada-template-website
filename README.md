@@ -69,9 +69,15 @@ We can further take a look at the section of the data that we will use that is c
 * * *
 ## The ESG data
 * * *
+
 After selecting the ETFs with the ESG labels the dataset is as follows:
 
 | Number of ETFs       | Labelled as ESG    | Percentage |
 |:--------------------:|:------------------:|:----------:|
 |                 4748 |                 60 |        1.3 |
+
+With the following sectors:
+
+<iframe src="https://pablovallbona.github.io/ada-template-website/assets/graphs/esg_sector_distribution.html" width="100%" height="600px" frameborder="0"></iframe>
+
 
