@@ -25,6 +25,8 @@ ESG stands for **Environmental**, **Social**, and **Governance**, basically, the
 # The Data
 * * *
 
+<img src="assets/img/show_me_the_data.gif" alt="intro_image" style="width:40%;max-width:1000px;display:block;margin:auto;">
+
 The data used in this investigation contains historical daily data on all the tickers, (stocks and ETFs), that are currently trading on NASDAQ starting from different timepoints up to 2025. The daily data contains **Opening**, **Closing**, **Highest** and **Lowest** prices as well as the total **volume** traded on that specific day. We also have access to metadata for each company where we find our ESG labels.
 
 
@@ -87,5 +89,4 @@ Let’s pause for a moment to examine the differences between ESG and non-ESG ET
 
 Next, we’ll take a closer look at our ESG ETFs by exploring their volatility, how they respond to crises, their long-term performance, and seasonal patterns. Move on to the next page to dive in.
 
-
-<img src="assets/img/show_me_the_data.gif" alt="intro_image" style="width:40%;max-width:1000px;display:block;margin:auto;">
+<img src="assets/img/toddler-dive-child.gif" alt="intro_image" style="width:40%;max-width:1000px;display:block;margin:auto;">
