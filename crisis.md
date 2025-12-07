@@ -13,8 +13,7 @@ We didn't just pick random bad days. We chose four distinct flavors of market ch
 *   **Russia-Ukraine Invasion (2022):** A sudden geopolitical shock that sent energy and commodity prices to the moon.
 *   **New Tariffs Shock (2025):** Our hypothetical flash-crash. A sharp, policy-driven panic to test reaction speed.
 
-![Not stonks](./assets/img/not_stonks.jpg)
-<img src="assets/img/not_stonks.jpg" alt="intro_image" style="width:30%;max-width:1000px;display:block;margin:auto;">
+<img src="assets/img/not_stonks.jpg" alt="intro_image" style="width:60%;max-width:1000px;display:block;margin:auto;">
 
 ## The Math Behind the Madness
 
