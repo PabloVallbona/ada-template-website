@@ -79,9 +79,9 @@ header th a:hover {
 
 /* -------- CONTENT CARD -------- */
 section {
-    margin-left: 320px;
+    margin-left: 380px;
     margin-right: 2rem;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 
     background: #ffffff;
     padding: 3rem;
@@ -89,6 +89,10 @@ section {
     border-radius: 22px;
     border: 1px solid #e1e7ef;
     box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+
+    display: block;
+    position: relative;
+    top: 0;
 }
 
 /* Tables */
