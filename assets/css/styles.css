@@ -197,6 +197,10 @@ main.container h2 {
     border: 1px solid #e1e7ef;
 }
 
+main.container ul li {
+    color: #2b3642 !important;     /* encore plus foncé */
+    line-height: 1.6;
+}
 
 @media (max-width: 900px) {
     header {
