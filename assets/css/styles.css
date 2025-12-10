@@ -149,6 +149,16 @@ main.container {
 
 }
 
+/* --- TABLE TEXT VISIBILITY FIX --- */
+main.container table td {
+    color: #1e2732 !important;   /* texte foncé lisible */
+    font-weight: 500;
+}
+
+main.container table tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
 
 @media (max-width: 900px) {
     header {
