@@ -193,7 +193,7 @@ main.container h2 {
     background: #ffffff !important;
     border-radius: 28px;
     padding: 3rem;
-    margin-left: 360px;  /* espace pour sidebar + marge */
+    margin-left: calc(320px + 2rem);
     margin-right: 3rem;
     box-shadow: 0 10px 40px rgba(0,0,0,0.05);
     border: 1px solid #e1e7ef;
