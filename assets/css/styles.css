@@ -92,8 +92,9 @@ header th a:hover {
 
 /* -------- CONTENT CARD -------- */
 section {
-    margin-left: 380px;
-    margin-right: 2rem;
+    margin-left: 400px;   
+    margin-right: auto;
+    max-width: 1100px;    
     margin-top: 0.5rem;
 
     background: #ffffff;
