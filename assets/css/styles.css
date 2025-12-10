@@ -159,6 +159,30 @@ main.container table tr:nth-child(even) {
     background: #f7f9fc;
 }
 
+main.container section-title {
+    background: #e9edf5;  /* gris-bleu très doux */
+}
+
+/* ---- FOND CONTRASTÉ SOUS LES TITRES ---- */
+main.container h2,
+main.container h1 {
+    background: #eef2f7;           /* léger contraste */
+    padding: 1.2rem 1rem;
+    margin: 2.5rem -3rem 1.5rem;   /* déborde pour toucher les bords */
+    border-radius: 12px;
+}
+
+main.container p,
+main.container table,
+main.container img {
+    background: #ffffff;
+}
+
+main.container h2 {
+    border-bottom: 2px solid #d0d7e2;
+    padding-bottom: .5rem;
+}
+
 
 @media (max-width: 900px) {
     header {
