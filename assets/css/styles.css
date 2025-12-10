@@ -146,17 +146,13 @@ footer {
     font-size: 0.85rem;
 }
 
-.sidebar-footer {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #e5e9ef;
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #6b7788;
+}
 
-    font-size: 0.85rem;
-    color: #8a94a6;
-}
-.sidebar-footer a {
-    color: #1565c0 !important;
-}
 
 
 /* -------- MOBILE -------- */
