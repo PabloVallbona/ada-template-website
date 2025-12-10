@@ -124,12 +124,12 @@ In fact, look at that sankey diagram of non-ESG sectors during the crisis: Energ
 <div class="flourish-embed flourish-sankey" data-src="visualisation/26669735"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26669735/thumbnail" width="100%" alt="sankey visualization" /></noscript></div>
 
 
-### Round 4: The Great Tariff Scare of '25 (Hypothetical)
+### Round 4: The Great Tariff Scare of 2025
 
 <div class="flourish-embed flourish-chart" data-src="visualisation/26666190"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26666190/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 
 **Analysis:**
-We modeled a sharp shock similar to 2018 but faster.
+During Trump's sudden tariff announcements, markets reacted sharply. These are the results:
 * **ESG Mean Return:** -0.232%
 * **Non-ESG Mean Return:** -0.229%
 
