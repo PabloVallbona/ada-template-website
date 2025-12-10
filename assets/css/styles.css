@@ -47,6 +47,12 @@ header {
     z-index: 1000;                   /* reste au-dessus du contenu */
 }
 
+.wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /* Title in sidebar */
 header h1 {
     font-size: 1.6rem;
@@ -140,10 +146,16 @@ footer {
     font-size: 0.85rem;
 }
 
-.wrapper {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+.sidebar-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e9ef;
+
+    font-size: 0.85rem;
+    color: #8a94a6;
+}
+.sidebar-footer a {
+    color: #1565c0 !important;
 }
 
 
