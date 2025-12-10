@@ -29,10 +29,10 @@ a:hover {
 
 /* -------- SIDEBAR / NAVIGATION -------- */
 header {
-    width: 260px;
+    width: 320px;
     position: fixed;
-    left: 2rem;
-    top: 2rem;
+    left: 2.5rem;
+    top: 2.5rem;
     background: #ffffff;
     padding: 2rem;
     border-radius: 20px;
