@@ -38,4 +38,8 @@ Below is a table of the results of our t-test:
 | 6 | 0.031200 | 36.317516 | 1.225119e-288 | 1214537 |
 
 
-Firstly, the large sample size strengthens our observations, which is further supported by the very small p-values, confirming the statistical significance of our results.
+Firstly, the large sample size strengthens our observations, which is further supported by the very small p-values, lettting us reject the null hypothesis that there is no correlation between the time of the year and the performance of the ETF market.
+
+## Looking at the ESGs
+
+Now lets do a similar analysis for our ESG ETFs. 
