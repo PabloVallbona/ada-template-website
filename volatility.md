@@ -354,10 +354,10 @@ r = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}
 $$
 
 where:
-- 'x_i' denotes ESG ETF volatility,
-- $y_i$ denotes annualized total return,
-- $\bar{x}$ and $\bar{y}$ are the sample means,
-- $n$ is the number of ETFs in the sample.
+- \( x_i \) denotes ESG ETF volatility,
+- \( y_i \) denotes annualized total return,
+- \( \bar{x} \) and \( \bar{y} \) are the sample means,
+- \( n \) is the number of ETFs in the sample.
 
 To assess statistical significance, the corresponding t-statistic is computed as:
 
