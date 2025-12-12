@@ -354,12 +354,10 @@ r = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}
 $$
 
 where:
-\begin{itemize}
-    \item $x_i$ denotes ESG ETF volatility,
-    \item $y_i$ denotes annualized total return,
-    \item $\bar{x}$ and $\bar{y}$ are the sample means,
-    \item $n$ is the number of ETFs in the sample.
-\end{itemize}
+- *xᵢ* denotes ESG ETF volatility  
+- *yᵢ* denotes annualized total return  
+- x̄ and ȳ are the sample means  
+- *n* is the number of ETFs in the sample
 
 To assess statistical significance, the corresponding t-statistic is computed as:
 
@@ -418,13 +416,14 @@ To check this, we plot for each timeframe:
 Visually, the shapes are not random at all: when the **average return is higher**, the **volatility–return correlation also tends to be higher**, and when the average return drops, the correlation weakens.
 
 To quantify this, we take one step further, computing a Pearson correlation within a Pearson correlation, or, borrowing from Inception, a small **“Pearsonception.”**
-- $X =$ “correlation (volatility vs return) for ESG ETFs”, and  
-- $Y =$ “average annualized return of ESG ETFs” across timeframes.
+- X = “correlation (volatility vs return) for ESG ETFs”, and  
+- Y = “average annualized return of ESG ETFs” across timeframes.
 
 For ESG ETFs only, we obtain:
 
-- $r \approx 0.43$  
-- $p \approx 0.10$  
+- r ≈ 0.43
+- p ≈ 0.10
+
 
 
 So the association is **moderately positive**, but **not statistically significant** at the usual 5% threshold. In other words, there is a visible tendency for “better ESG periods” to come with a stronger volatility–return link, but the data are not strong enough to make a hard claim. It’s more of a *hint* than a formal proof.
@@ -449,13 +448,13 @@ Here, the pattern becomes much more striking. When the **overall ETF market perf
 
 Running the same meta-correlation between:
 
-- $X =$ “correlation (volatility vs return) for all ETFs (with outliers)”, and  
-- $Y =$ “average annualized return of all ETFs”,
+- X = “correlation (volatility vs return) for all ETFs (with outliers)”, and  
+- Y = “average annualized return of all ETFs”,
 
 we get:
 
-- $r \approx 0.88$  
-- $p \approx 1.35 \times 10^{-5}$  
+- *r* ≈ 0.88
+- *p* ≈ 1.35e-5
 
 
 This is a **very strong and statistically significant** relationship. In plain language:
