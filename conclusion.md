@@ -10,7 +10,7 @@ layout: default
 <a id="ref-1"></a>
 **[1]** MSCI. *What is ESG Investing?*  
 [https://www.msci.com/our-solutions/esg-investing/what-is-esg](https://www.msci.com/our-solutions/esg-investing/what-is-esg)  
-[↩ back to text](/#cite-1)
+[↩ back to text](/ada-template-website/#cite-1)
 
 <a id="ref-2"></a>
 **[2]** CFA Institute. *ESG Investing*  
