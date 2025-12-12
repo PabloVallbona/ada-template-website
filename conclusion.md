@@ -20,4 +20,4 @@ layout: default
 <a id="ref-3"></a>
 **[3]** European Commission. *SFDR*  
 [https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/sfdr_en](https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/sfdr_en)  
-[↩ back to text](/#cite-3)
+[↩ back to text](readme.html#cite-3)
