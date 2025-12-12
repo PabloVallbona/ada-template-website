@@ -17,6 +17,8 @@ navigation:
     url: long
   - title: Seasonality
     url: seasonality
+  - title: Conclusion
+    url: conclusion
   - title: The Team
     url: team
 markdown: kramdown
