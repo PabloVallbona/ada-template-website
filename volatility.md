@@ -117,7 +117,6 @@ $$
 
 - The average volatility of each group :
 
----
 $$
 \overline{\sigma} 
 = \frac{1}{K} \sum_{i=1}^{K} \sigma_i
