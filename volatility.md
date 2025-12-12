@@ -75,10 +75,10 @@ $$
 
 
 Log returns and annualized returns are commonly used in finance because they behave much better than simple returns. 
-They naturally account for the negative impact of volatility on long-term growth (“volatility drag”) and combine additively over time, making them ideal for multi-period analysis.<sup><a href="conclusion.html#ref-4">[4]</a></sup>
+They naturally account for the negative impact of volatility on long-term growth (“volatility drag”) and combine additively over time, making them ideal for multi-period analysis.<sup><a href="conclusion.html#ref-4" id="cite-esg-4">[4]</a></sup>
 For a rigorous explanation of why log returns are preferred in financial modeling, see:  
-Hull, *Options, Futures, and Other Derivatives*, Chapter 15 (standard reference in quantitative finance).<sup><a href="conclusion.html#ref-5">[5]</a></sup>.
-If you prefer, I can also link a free online source (MIT, CFA, or an academic paper).<sup><a href="conclusion.html#ref-6">[6]</a></sup><sup><a href="conclusion.html#ref-7">[7]</a></sup>
+Hull, *Options, Futures, and Other Derivatives*, Chapter 15 (standard reference in quantitative finance).<sup><a href="conclusion.html#ref-5" id="cite-esg-5">[5]</a></sup>.
+If you prefer, I can also link a free online source (MIT, CFA, or an academic paper).<sup><a href="conclusion.html#ref-6" id="cite-esg-6">[6]</a></sup><sup><a href="conclusion.html#ref-7" id="cite-esg-7">[7]</a></sup>
 
 ---
 
@@ -89,7 +89,7 @@ $$
 $$
 
 Volatility measures how much an ETF's returns fluctuate around their average value.  
-Mathematically, it is the standard deviation of daily log returns. A higher volatility means the ETF experiences larger day-to-day movements, which corresponds to higher uncertainty and higher risk of rapid losses.<sup><a href="conclusion.html#ref-8">[8]</a></sup>.
+Mathematically, it is the standard deviation of daily log returns. A higher volatility means the ETF experiences larger day-to-day movements, which corresponds to higher uncertainty and higher risk of rapid losses.<sup><a href="conclusion.html#ref-8" id="cite-esg-8">[8]</a></sup>.
 
 ---
 
