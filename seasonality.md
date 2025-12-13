@@ -38,16 +38,15 @@ Below is a table of the results of our t-test:
 | 6 | 0.031200 | 36.317516 | 1.225119e-288 | 1214537 |
 
 
-Firstly, the large sample size strengthens our observations, which is further supported by the very small p-values, lettting us reject the null hypothesis that there is no correlation between the time of the year and the performance of the ETF market. We do have to note how small the z-scores are showing that this rvariation in between seasons is not very large. 
+Firstly, the large sample size strengthens our observations, which is further supported by the very small p-values, lettting us reject the null hypothesis that there is no correlation between the time of the year and the performance of the ETF market. We do have to note how small the z-scores are showing that this variation in between seasons is not very large. 
 
-## Looking at the ESGs
+## Looking at the ESGs
 
 Now lets do a similar analysis for our ESG ETFs. 
 
-<iframe src="https://pablovallbona.github.io/ada-template-website/assets/graphs/ESG.html" width="100%" height="600px" style="border:none;"></iframe>
-
-
 <img src="assets/img/heatmap_all_esg_average.png" alt="intro_image" style="width:100%;max-width:1000px;display:block;margin:auto;">
+
+The results are broadly similar, but we observe an increase in the absolute values of the z-scores across all periods. This suggests a seasonality pattern that is comparable to the one observed for all ETFs, but potentially slightly stronger in magnitude. To see whether these differences are meaningful, we now turn to the t-test results to assess statistical significance.
 
 | Period | Mean Z-Score | t-statistic | p-value | N |
 |:------:|:------------:|:-----------:|:--------:|:---:|
@@ -57,3 +56,11 @@ Now lets do a similar analysis for our ESG ETFs.
 | 4 | 0.027376  | 4.423547  | 9.769529e-06 | 17,030 |
 | 5 | -0.060516 | -8.977443 | 3.046224e-19 | 17,541 |
 | 6 | 0.067915  | 9.478198  | 2.940545e-21 | 16,047 |
+
+
+In this case, the p-values are still low, though generally higher than in the full ETF analysis, and remain statistically significant for all periods when using a 0.05 significance threshold.
+
+## In Conlusion:
+
+What we can first conclude is that this seasonality analysis turned out to be… slightly underwhelming. The ESG and non-ESG ETFs display very similar seasonal patterns, and while we do find statistically significant differences across periods, the associated z-scores are extremely small. This indicates that, despite statistical significance, the economic impact of these seasonal effects is minimal and likely negligible in practice.
+It’s a bit disappointing—we had high hopes for uncovering strong seasonal signals here, but that’s part of the data analysis journey. Not every path leads to a breakthrough. Still, ruling out weak or insignificant effects is valuable in itself, and we move forward a little wiser than before.

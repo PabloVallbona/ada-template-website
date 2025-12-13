@@ -52,3 +52,7 @@ Massachusetts Institute of Technology.
 Defines volatility as the standard deviation of returns and presents it as a core risk metric in finance.  
 [https://www.cfainstitute.org/en/research/foundation/2010/quantitative-methods](https://www.cfainstitute.org/en/research/foundation/2010/quantitative-methods)
 [↩ back to text](/ada-template-website/volatility/#cite-esg-8)
+
+<a id="ref-9"></a>
+**[9]** Encyclopaedia Britannica. *Stock Market Seasonality.*  
+[https://www.britannica.com/money/stock-market-seasonality](https://www.britannica.com/money/stock-market-seasonality)  
