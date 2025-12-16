@@ -103,7 +103,7 @@ Let's now plot the results correspondingg to this Timeframe :
 
 ---
 <img src="assets/img/Volandyieldwithoutilers.png" 
-     alt="Volatility and Annualized Return without outliers"
+     alt="Volatility and Annualized Return with outliers"
      style="width:100%;max-width:1000px;display:block;margin:auto;">
 
 ---
@@ -176,14 +176,14 @@ This corresponds approximately to keeping the central 95% of the data, which is 
 
 ---
 
-Lets Now perform the same analysis related results:
+Lets Now perform the same analysis related results: 
 
 <a id="fig-vol-yield-with-outliers"></a>
 
 **Figure 2 — Annualized Return and Volatility (without outliers)**
 
 ---
-<img src="assets/img/Volandyieldwitoutoutliers.png" 
+<img src="assets/img/Volandyieldwithoutoutilers.png" 
      alt="Volatility and Annualized Return without outliers"
      style="width:100%;max-width:1000px;display:block;margin:auto;">
      
@@ -390,7 +390,7 @@ Now we can plot the differrents p values and pearson correlation coefficients fo
      alt="Risk = reward?3"
      style="width:80%;max-width:1000px;display:block;margin:auto;">
 
-Across most time frames, the correlation between ESG ETF volatility and annualized returns is consistently positive and statistically significant, with Pearson correlation coefficients generally ranging between 0.6 and 0.8 and p-values below the 5% significance threshold. This indicates a robust statistical association within the analyzed sample. However, the strength of the relationship varies across time windows and weakens for the longest horizons, where the number of available ETFs is smaller. These results therefore highlight a stable positive correlation between vollatility and return over the different ESG ETF.
+Across most time frames, the correlation between ESG ETF volatility and annualized returns is consistently positive and statistically significant, with Pearson correlation coefficients generally ranging between 0.6 and 0.8 and p-values below the 5% significance threshold. This indicates a robust statistical association within the analyzed sample. However, the strength of the relationship varies across time windows and weakens for the longest horizons, where the number of available ETFs is smaller. Overall, these results show a stable positive correlation between vollatility and return over the different ESG ETF...
 
 A geometry expert Sister suddently shouts in the back of the room: 
 > **“WAIIIIIIT I'HAVE SEEN THIS SHAPE BEFORE!!”** 
@@ -419,12 +419,14 @@ To quantify this, we take one step further, computing a Pearson correlation with
 - X = “correlation (volatility vs return) for ESG ETFs”, and  
 - Y = “average annualized return of ESG ETFs” across timeframes.
 
+<img src="assets/img/Corrception1.png" 
+     alt="Corrception1"
+     style="width:80%;max-width:1000px;display:block;margin:auto;">
+
 For ESG ETFs only, we obtain:
 
 - r ≈ 0.43
 - p ≈ 0.10
-
-
 
 So the association is **moderately positive**, but **not statistically significant** at the usual 5% threshold. In other words, there is a visible tendency for “better ESG periods” to come with a stronger volatility–return link, but the data are not strong enough to make a hard claim. It’s more of a *hint* than a formal proof.
 
@@ -439,17 +441,17 @@ We repeat exactly the same exercise, but this time on the **entire ETF universe*
 - the correlation between volatility and returns for all ETFs, and  
 - their average annualized return over each timeframe.
 
-<img src="assets/img/all_ETF_corr_and_return.png" 
-     alt="Risk = reward?4"
-     style="width:80%;max-width:1000px;display:block;margin:auto;">
-
 
 Here, the pattern becomes much more striking. When the **overall ETF market performs strongly**, the volatility–return correlation becomes much stronger; when performance is weaker, the correlation collapses.
 
-Running the same meta-correlation between:
+Running the same "Pearsonception" between:
 
 - X = “correlation (volatility vs return) for all ETFs (with outliers)”, and  
-- Y = “average annualized return of all ETFs”,
+- Y = “average annualized return of all ETFs”
+  
+<img src="assets/img/Corrception2.png" 
+     alt="Corrception2"
+     style="width:80%;max-width:1000px;display:block;margin:auto;">
 
 we get:
 
@@ -472,14 +474,14 @@ Putting all this together, we can now refine our earlier interpretation:
 - But this correlation **seems to strengthen when the whole environment is good** (high average ESG returns) and would likely be weaker in less favorable regimes.
 - On the broader ETF universe, this effect is even more obvious: when the market is doing great, volatility behaves more like an **upside amplifier** than a neutral risk measure.
 
-In other words, the volatility–return correlation we see for ESG ETFs is **not a timeless law of finance**.  
+In other words, the volatility–return correlation we see for ESG ETFs is **not a timeless law of ESG finance**.  
 It is at least partly **biased by the fact that ESG ETFs performed very well over the sample period**. During strong performance regimes, high-volatility products tend to sit on the right side of the trend and look like “high risk = high reward”. But if the global ESG performance were to weaken, the same high volatility could just as easily amplify **losses** instead.
 
 So from an investor perspective:
 
 > Higher volatility in ESG ETFs has historically been associated with higher returns in this dataset, **but mainly in periods when ESG as a whole was doing well**. Volatility is better seen as an amplifier of whatever regime you are in, not as a guarantee of extra return.
 
-Time to keep that in mind before aping into the spiciest ESG tickers on the list.
+Time to keep that in mind before investing into the spiciest ESG tickers on the list.
 
 
 
