@@ -5,18 +5,14 @@ show_downloads: True
 navigation:
   - title: Introduction & Dataset
     url: /
-  - title: Example
-    url: example
   - title: Volatility
     url: volatility
-  - title: Crisis Reaction
-    url: crisis
   - title: Homogeneity
     url: homogeneity
-  - title: Long Term Performance
-    url: long
   - title: Seasonality
     url: seasonality
+  - title: Crisis Reaction
+    url: crisis
   - title: Conclusion
     url: conclusion
   - title: The Team

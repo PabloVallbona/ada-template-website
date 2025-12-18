@@ -63,4 +63,4 @@ In this case, the p-values are still low, though generally higher than in the fu
 ## In Conlusion:
 
 What we can first conclude is that this seasonality analysis turned out to be… slightly underwhelming. The ESG and non-ESG ETFs display very similar seasonal patterns, and while we do find statistically significant differences across periods, the associated z-scores are extremely small. This indicates that, despite statistical significance, the economic impact of these seasonal effects is minimal and likely negligible in practice.
-It’s a bit disappointing—we had high hopes for uncovering strong seasonal signals here, but that’s part of the data analysis journey. Not every path leads to a breakthrough. Still, ruling out weak or insignificant effects is valuable in itself, and we move forward a little wiser than before.
+It’s a bit disappointing as we had high hopes for uncovering strong seasonal signals here, but that’s part of the data analysis journey. Not every path leads to a breakthrough. Still, ruling out weak or insignificant effects is valuable in itself, and we move forward a little wiser than before.
