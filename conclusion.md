@@ -3,6 +3,20 @@ layout: default
 ---
 
 # Conclusion
+This study set out to answer a simple question: does investing responsibly also make financial sense?
+By combining long-term volatility and return analysis with correlation structures, seasonality tests, and selected crisis episodes, a coherent picture of ESG investing emerges.
+
+Across the full sample, the most robust and consistent result concerns risk. ESG ETFs are systematically less volatile than non-ESG ETFs across timeframes, whether extreme outliers are included or removed. This lower volatility translates into smoother return paths and reduced exposure to extreme drawdowns, shaping ESG portfolios as structurally more stable investment vehicles rather than aggressive return-seeking strategies.
+
+Return performance, however, is more nuanced and clearly regime-dependent. When extreme outcomes are included, ESG ETFs tend to outperform the broader market over medium and long horizons. Once outliers are removed, excess returns become smaller and occasionally negative over specific windows, yet remain broadly competitive. These results suggest that ESG volatility acts primarily as an amplifier of prevailing market conditions, enhancing gains during favorable regimes while limiting losses during adverse ones, rather than guaranteeing higher returns in all environments.
+
+Crisis periods provide a useful stress test of this risk profile. In three out of four major market disruptions, ESG portfolios experienced smaller average losses and significantly lower volatility than non-ESG portfolios, reinforcing their defensive characteristics. The COVID-19 crisis was particularly illustrative: while non-ESG portfolios showed higher median daily returns, their extreme downside days dominated overall performance, whereas ESG portfolios followed a more controlled and predictable trajectory. The Russia–Ukraine invasion represents a notable exception, highlighting the cost of ESG sectoral exclusions, particularly in energy and defense, during commodity-driven shocks.
+
+Beyond performance and risk, the correlation analysis reveals an important structural limitation: homogeneity. ESG ETFs display substantially higher average correlations than non-ESG ETFs, reflecting overlapping holdings and shared factor exposures. Despite varied labels, many ESG products concentrate on similar large-cap, low-carbon firms, reducing effective diversification and creating hidden concentration risk for investors.
+
+Seasonality effects further temper expectations. Although statistically significant patterns are observed, their economic magnitude is small and largely similar across ESG and non-ESG ETFs, suggesting that timing considerations play a secondary role relative to long-term risk allocation.
+
+Overall, the evidence indicates that ESG investing primarily delivers value through risk reduction rather than systematic outperformance. ESG portfolios offer lower volatility, smoother drawdowns, and credible capital preservation, at the cost of sectoral blind spots and reduced diversification. For investors prioritizing stability and resilience, ESG strategies are well suited; for those seeking cyclical upside or deep diversification, ESG labels alone may prove insufficient.
 
 ---
 ## References
