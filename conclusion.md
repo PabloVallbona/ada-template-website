@@ -24,7 +24,7 @@ layout: default
 [https://en.wikipedia.org/wiki/Rate_of_return](https://en.wikipedia.org/wiki/Rate_of_return)  
 
 <a id="ref-5"></a>
-**[5]** Hull, John C. *Options, Futures, and Other Derivatives*, Chapter 15.  
+**[5]** Hull, John C. *Options, Futures, and Other Derivatives*.  
 Pearson Education.  
 [https://www.pearson.com/en-us/subject-catalog/p/options-futures-and-other-derivatives/P200000003295](https://www.pearson.com/en-us/subject-catalog/p/options-futures-and-other-derivatives/P200000003295)  
 
@@ -46,3 +46,12 @@ Defines volatility as the standard deviation of returns and presents it as a cor
 <a id="ref-9"></a>
 **[9]** Encyclopaedia Britannica. *Stock Market Seasonality.*  
 [https://www.britannica.com/money/stock-market-seasonality](https://www.britannica.com/money/stock-market-seasonality)  
+
+<a id="ref-10"></a>
+**[10]** CFA Institute. (2023). *CFA Program Curriculum – Quantitative Methods*.  
+[https://www.cfainstitute.org/en/programs/cfa/curriculum/quantitative-methods](https://www.cfainstitute.org/en/programs/cfa/curriculum/quantitative-methods) 
+
+
+<a id="ref-11"></a>
+**[11]** Campbell, J. Y., Lo, A. W., & MacKinlay, A. C. (1997). *The Econometrics of Financial Markets*. Princeton University Press.  
+[https://press.princeton.edu/books/paperback/9780691043012/the-econometrics-of-financial-markets](https://press.princeton.edu/books/paperback/9780691043012/the-econometrics-of-financial-markets)
