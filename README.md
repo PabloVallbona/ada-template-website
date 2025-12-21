@@ -15,21 +15,17 @@ ESG stands for **Environmental**, **Social**, and **Governance**, basically, the
 But a quick heads-up: the rules for what counts as “ESG” aren’t set in stone yet. Each fund issuer can have slightly different standards putting more importance into certain categories, so ESG funds can vary quite a bit
 <sup><a href="conclusion.html#ref-esg-3" id="cite-esg-3">[3]</a></sup>.
 
-
-
-
-
 * * *
 # Research Questions
 
 
 1. How does the volatility ESG ETFs over time differs to traditional ETFs?  
 
-2. How do ESG-focused portfolios compare in terms of profitability and volatility?  
+2. To what extent do ESG-focused exchange-traded funds provide meaningful diversification relative to one another?
 
-3. Does the relative performance of ESG ETFs depend strongly on macroeconomic cycles, such as recessions or inflationary periods? 
+3. Does the performance of ETFs vary with the same pattern every year and does this seasonality difer from ESG to non-ESG ETFs?
 
-4. Does the performance of ETFs vary with the same pattern every year and does this seasonality difer from ESG to non-ESG ETFs?
+4. Do ESGs exhibit superior downside protection relative to non-ESG portfolios during periods of market stress?
 
 
 * * *
