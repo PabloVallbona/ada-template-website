@@ -97,7 +97,7 @@ Mathematically, it is the standard deviation of daily log returns. A higher vola
 
 ---
 
-Let's now plot the results correspondingg to this Timeframe : 
+Let's now plot the results corresponding to this Timeframe : 
 <a id="fig-vol-yield-with-no-outliers"></a>
 
 **Figure 1 — Annualized Return and Volatility**
