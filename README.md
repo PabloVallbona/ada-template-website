@@ -19,13 +19,15 @@ But a quick heads-up: the rules for what counts as “ESG” aren’t set in sto
 # Research Questions
 
 
-1. How does the volatility ESG ETFs over time differs to traditional ETFs?  
+1. How does the volatility and return ESG ETFs over time differs to traditional ETFs?
 
-2. To what extent do ESG-focused exchange-traded funds provide meaningful diversification relative to one another?
+2. Is there a correlation between volatility and return within ESG ETFs?
 
-3. Does the performance of ETFs vary with the same pattern every year and does this seasonality difer from ESG to non-ESG ETFs?
+3. To what extent do ESG-focused exchange-traded funds provide meaningful diversification relative to one another?
 
-4. Do ESGs exhibit superior downside protection relative to non-ESG portfolios during periods of market stress?
+4. Does the performance of ETFs vary with the same pattern every year and does this seasonality difer from ESG to non-ESG ETFs?
+
+5. Do ESGs exhibit superior downside protection relative to non-ESG portfolios during periods of market stress?
 
 
 * * *
