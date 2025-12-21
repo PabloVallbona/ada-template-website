@@ -45,6 +45,7 @@ Part 2. Then we repeat the exact same analysis across many different thresholds
     to check whether there is a common tendency toward higher or lower performance in terms of yields and volatility.
 
 This way, instead of relying on a single arbitrary timeframe, we examine whether the results are **stable across multiple horizons**, making our conclusions far more robust.
+
 ---
 ### Part 1. Performance of ESG ETF vs the market on a middle-ground point:
 
