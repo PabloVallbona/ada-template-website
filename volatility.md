@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Volatility and Yield Analysis
+# Volatility and Return Analysis
 * * *
 This is the part where the data is going to tell us whether, in the past years, investing in ethical ETFs could also lead to good financial results.
 
