@@ -4,17 +4,17 @@ layout: default
 
 # Volatility and Yield Analysis
 * * *
-This is the part where data is going to tell us whether, in the past years, investing in ethical ETFs could also lead to good financial results.
+This is the part where the data is going to tell us whether, in the past years, investing in ethical ETFs could also lead to good financial results.
 
 Before anything else, we first need to understand what kind of data we are working with and what its limitations are.
 
 In this dataset, there are **61 different ETFs with an ESG label**. Each one has a different timeframe depending on how long data has been available (see the *Data* section for more details about each ETF).
 
 We now face a major issue:  
-to maximize the quality of our answer, we would like our analysis to include **as many ESG ETFs as possible** *and* to be performed over the **longest possible timeframe**.  
-However, the longer the timeframe, the fewer ESG ETFs actually have data available over that window.
+to maximize the quality of our answer, we would like our analysis to include **as many ESG ETFs as possible** *and* to be performed over the **longest possible time frame**.  
+However, the longer the time frame, the fewer ESG ETFs actually have data available over that window.
 
-The following graph — the famous *“survivor function”* — shows how many ESG ETFs remain in the analysis depending on the length of the chosen timeframe.
+The following graph — the famous *“survivor function”* — shows how many ESG ETFs remain in the analysis depending on the length of the chosen time frame.
 
 ---
 
@@ -51,7 +51,7 @@ This way, instead of relying on a single arbitrary timeframe, we examine whether
 
 <a id="clalculus-of-yields-and-volatility"></a>
 
-Lets Dive now in the first poart of our analysis. We selected the middle-ground point in our analysis. For each ETF that has data available in this time frame we perform the folowing calculations :
+Let's Dive now in the first part of our analysis. We selected the middle-ground point in our analysis. For each ETF that has data available in this time frame we perform the following calculations :
 
 ---
 - The log daily return :
@@ -61,14 +61,14 @@ r_t = \ln\left(\frac{P_t}{P_{t-1}}\right)
 $$
 
 ---
-- The We then compute the **average daily log return** for each ETF:
+- We then compute the **average daily log return** for each ETF:
   
 $$
 \bar{r} = \frac{1}{N} \sum_{t=1}^{N} r_t
 $$
 
 ---
-Once we know the average daily log return of an ETF, we turn it into an average yearly performance over this Timeframe :
+Once we know the average daily log return of an ETF, we turn it into an average yearly performance over this time frame :
 
 $$
 \text{Annualized Return} = e^{252 \cdot \bar{r}} - 1
@@ -109,9 +109,9 @@ Let's now plot the results corresponding to this Timeframe :
 
 ---
 
-And let s compute aswell :
+And let's compute as well :
 
-- The average anualized return of each Group :
+- The average annualized return of each Group :
   
 $$
 \overline{R}_{\mathrm{ann}} 
@@ -145,7 +145,7 @@ But since our objective is to compare **individual ETF performance**, the simple
 
 **Table 1 — ESG vs Market Performance Summary**
 
-| Group        | Avg Annualized Return (%) | Avg Daily Volatility | Excess anualized return vs Market (%) |
+| Group        | Avg Annualized Return (%) | Avg Daily Volatility | Excess annualized return vs Market (%) |
 |--------------|----------------------------|------------------------|------------------------|
 | **ESG ETFs**    | 9.45                       | 0.0091                 | 1.14                   |
 | **Market ETFs** | 8.31                       | 0.0124                 | 0.00                   |
@@ -203,9 +203,9 @@ Lets Now perform the same analysis related results:
 
 
 
-**Sad news...** even though the risk still seems much lower as the average volatility of an ESG ETF is still much lower than the average of the market, they now seem to have slightly lower performances on the anualized return with a negative performance of **-0.45%** against a usual ETF in the market. 
+**Sad news...** even though the risk still seems much lower as the average volatility of an ESG ETF is still much lower than the average of the market, they now seem to have slightly lower performances on the annualized return with a negative performance of **-0.45%** against a usual ETF in the market. 
 
-**But BRO BRO BRO don't cry right now !** Remember this is just one point of analysis among many different time frames ! Read the next part before jumping once again to fast conclusions !
+**But BRO BRO BRO don't cry right now!** Remember this is just one point of analysis among many different time frames ! Read the next part before jumping once again to fast conclusions !
 
 ***
 
@@ -251,7 +251,7 @@ We choose:
 - a **maximum timeframe of 2200 days**, where **13 ESG ETFs** remain.
 
 Between these two extremes, we run the same Part 1 analysis at **every 100-day step** (500, 600, 700, …, 2200 days).
-We then extracted and ploted the results from "average volatility" and "Anualized return of ESG vs Market" of each ETF group and plot.
+We then extracted and ploted the results from "average volatility" and "Annualized return of ESG vs Market" of each ETF group and plot.
 
 Let's see what we got!
 
@@ -273,9 +273,9 @@ In every single case, the gap remains **significant (around 0.02 of volatility u
 
 ---
 
-- Anualized return comparison :
+- Annualized return comparison :
   <img src="assets/img/fina(R2-with).png" 
-       alt="Excess anualized return no outliers "
+       alt="Excess annualized return no outliers "
        style="width:90%;max-width:1000px;display:block;margin:auto;">
 Here again, the dominance of the ESG group is very clear.  
 For every timeframe tested, ESG ETFs show a **positive excess annualized return**, typically between **+1.1% and +2%**, and sometimes even **above +3%**.
@@ -298,9 +298,9 @@ The magnitude of the difference becomes slightly smaller, but the hierarchy does
 **Conclusion:** ESG ETFs still appear **less risky** on average than non-ESG ETFs, even once the comparison is made fairer by removing outliers.
 
 ---
-- Anualized return comparison :
+- Annualized return comparison :
   <img src="assets/img/final(R2-no).png" 
-       alt="Excess anualized return no outliers "
+       alt="Excess annualized return no outliers "
        style="width:90%;max-width:1000px;display:block;margin:auto;">
  
 Once outliers are removed, the picture becomes more nuanced.  
@@ -334,11 +334,11 @@ but the **general tendency remains favorable**, especially for medium and long h
 ---
 
 This part is for all the bros and sisters that are willing to get high returns with ESG ETFS.
-Using the previously computed values on volatility and yield this part will answer the wether taking higher amount of risk, therfore investing ine ESG ETF with higher volatility (more volatility = more uncertainty), also tend to increase the average return related to the ESG in the past few years.
+Using the previously computed values on volatility and yield this part will answer the whether taking higher amount of risk, therefore investing in an ESG ETF with higher volatility (more volatility = more uncertainty), also tend to increase the average return related to the ESG in the past few years.
 
-Let's answer this question with the same metodology we used above: 
+Let's answer this question with the same methodology we used above: 
 First we will check the correlation between the volatility on our initial example with the Timeframe of 1300 days and 41 ESG ETF left.
-We will calculate the pearson correlation between volatility and return o this first example.
+We will calculate the Pearson correlation between volatility and return for this first example.
 Then once again to analyse it on all the different chosen timeframes.
 
 *reminder: the times frames are every 100-day step (600, 700, …, 2200 days)*
@@ -375,7 +375,7 @@ $$
 A correlation is considered statistically significant if the p-value is below the chosen significance threshold.  
 In this study, standard thresholds are used: p < 0.05 indicates statistical significance, while p < 0.01 indicates strong statistical significance.
 
-Since all the necessary values where already calculated [above](#clalculus-of-yields-and-volatility), we can directly plot our results:
+Since all the necessary values were already calculated [above](#clalculus-of-yields-and-volatility), we can directly plot our results:
 
 <img src="assets/img/esg_1300_days_corr.png" 
      alt="Risk = reward?1"
@@ -385,16 +385,16 @@ In this specific case, the Pearson correlation coefficient is high ($r = 0.75$) 
 
 ---
 
-Now we can plot the differrents p values and pearson correlation coefficients for every different choses times frames :
+Now we can plot the differrent p values and pearson correlation coefficients for every different chosen times frames :
 
 <img src="assets/img/overall_corr.png" 
      alt="Risk = reward?3"
      style="width:80%;max-width:1000px;display:block;margin:auto;">
 
-Across most time frames, the correlation between ESG ETF volatility and annualized returns is consistently positive and statistically significant, with Pearson correlation coefficients generally ranging between 0.6 and 0.8 and p-values below the 5% significance threshold. This indicates a robust statistical association within the analyzed sample. However, the strength of the relationship varies across time windows and weakens for the longest horizons, where the number of available ETFs is smaller. Overall, these results show a stable positive correlation between vollatility and return over the different ESG ETF...
+Across most time frames, the correlation between ESG ETF volatility and annualized returns is consistently positive and statistically significant, with Pearson correlation coefficients generally ranging between 0.6 and 0.8 and p-values below the 5% significance threshold. This indicates a robust statistical association within the analyzed sample. However, the strength of the relationship varies across time windows and weakens for the longest horizons, where the number of available ETFs is smaller. Overall, these results show a stable positive correlation between volatility and return over the different ESG ETFs...
 
-A geometry expert Sister suddently shouts in the back of the room: 
-> **“WAIIIIIIT I'HAVE SEEN THIS SHAPE BEFORE!!”** 
+A geometry expert sister suddently shouts in the back of the room: 
+> **“WAIIIIIIT, I'HAVE SEEN THIS SHAPE BEFORE!!”** 
 
 ### Correlation vs. Average Performance: Is There a Hidden Pattern?
 
