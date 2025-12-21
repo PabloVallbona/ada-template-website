@@ -5,7 +5,7 @@ show_downloads: True
 navigation:
   - title: Introduction & Dataset
     url: /
-  - title: Volatility
+  - title: Volatility and Return
     url: volatility
   - title: Homogeneity
     url: homogeneity
