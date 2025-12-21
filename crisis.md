@@ -22,16 +22,16 @@ Before we look at the charts, let's establish how we kept score. We calculated r
 **1. Daily Returns ($$R_t$$):**  
 For every asset, we calculated the daily percentage change:  
 $$R_t = \left( \frac{P_t - P_{t-1}}{P_{t-1}} \right)$$
-with $$P_t$$ being the closing price on day $$t$$.
+with $$P_t$$ being the closing price on day $$t$$<sup><a href="conclusion.html#ref-5" id="cite-5">[5]</a></sup>.
 
 **2. Cumulative Returns ($$CR_T$$):**  
 To visualize the "pain journey" over time $$T$$, we compounded these daily returns:  
-$$CR_T = \left( \prod_{t=1}^{T} (1 + R_t) \right) - 1$$
+$$CR_T = \left( \prod_{t=1}^{T} (1 + R_t) \right) - 1$$<sup><a href="conclusion.html#ref-10" id="cite-10">[10]</a></sup>.
 
 **3. Volatility (Risk):**  
 We measure fear by the standard deviation ($$\sigma$$) of the daily returns during the crisis period. A higher $$\sigma$$ means the portfolio was wildly unpredictable.  
 $$\sigma = \sqrt{\frac{\sum (R_t - \bar{R})^2}{N-1}}$$
-with $$\bar{R}$$ being the mean daily return and $$N$$ the number of trading days.
+with $$\bar{R}$$ being the mean daily return and $$N$$ the number of trading days<sup><a href="conclusion.html#ref-11" id="cite-11">[11]</a></sup>.
 
 ---
 
