@@ -21,7 +21,7 @@ But a quick heads-up: the rules for what counts as “ESG” aren’t set in sto
 
 1. How does the volatility and return ESG ETFs over time differs to traditional ETFs?
 
-2. Is there a correlation between volatility and return within ESG ETFs?
+2. Is there a relationship between volatility and returns in ESG ETFs?
 
 3. To what extent do ESG-focused exchange-traded funds provide meaningful diversification relative to one another?
 
